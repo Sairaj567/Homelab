@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.cpus = 2
       vb.customize ["modifyvm", :id, "--vram", "16"]
     end
-    siem.vm.provision "shell", path: "provision/install_wazuh.sh", args: ["10.10.0.50"]
+    siem.vm.provision "shell", path: "provision/install_wazuh.sh", args: ["192.168.56.10"]
   end
 
   ############################
@@ -33,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "kali" do |kali|
     kali.vm.box = "kalilinux/rolling"
     kali.vm.hostname = "kali.local"
-    kali.vm.network "private_network", ip: "10.10.0.51"
+    kali.vm.network "private_network", ip: "192.168.56.11"
     kali.vm.provider "virtualbox" do |vb|
       vb.memory = 4096
       vb.cpus = 1
