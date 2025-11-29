@@ -1,1 +1,18 @@
 .vagrant/
+
+# VirtualBox / Vagrant artifacts
+*.log
+*.retry
+*.box
+*.ovf
+*.ova
+*.vdi
+*.iso
+
+# Local OS cruft
+.DS_Store
+Thumbs.db
+
+# Shared lab artifacts (keep folder via .gitkeep)
+shared/*
+!shared/.gitkeep
