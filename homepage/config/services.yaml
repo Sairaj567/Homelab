@@ -64,8 +64,15 @@
         href: https://dash.cloudflare.com
         description: Network Tunnel
 
+    - Glances:
+        icon: glances.png
+        href: http://10.10.0.191:61208
+        description: System Monitoring Dashboard
+
 - System Metrics:
     - CPU Usage:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -74,6 +81,8 @@
           chart: true
 
     - Memory Usage:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -82,6 +91,8 @@
           chart: true
 
     - Network Usage:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -90,6 +101,8 @@
           chart: true
 
     - Top Processes:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -97,6 +110,8 @@
           metric: process
 
     - CPU Temp:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -105,6 +120,8 @@
           chart: true
 
     - Disk I/O:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -113,6 +130,8 @@
           chart: true
 
     - Disk Space:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -121,6 +140,8 @@
           chart: true
 
     - Docker Containers:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
@@ -128,6 +149,8 @@
           metric: docker
 
     - System Uptime:
+        icon: glances.png
+        href: http://10.10.0.191:61208
         widget:
           type: glances
           url: http://glances:61208
