@@ -14,21 +14,25 @@ background:
 layout:
   - Media & Entertainment:
       style: grid
-      columns: 1
+      columns: 2
     Media Management:
       style: grid
-      columns: 1
+      columns: 3
     Storage & Infrastructure:
       style: grid
+      columns: 2
+  - Developer:
+      style: grid
+      columns: 2
+    Social:
+      style: grid
+      columns: 2
+    Education:
+      style: grid
       columns: 1
-  - System Metrics:
+    Entertainment:
       style: grid
       columns: 3
-  - Developer:
-      style: row
-    Social:
-      style: row
-    Education:
-      style: row
-    Entertainment:
-      style: row
+  - System Metrics:
+      style: grid
+      columns: 2

@@ -6,30 +6,38 @@
     - Github:
         - abbr: GH
           href: https://github.com/
+          icon: github.png
     - ChatGPT:
         - abbr: GPT
           href: https://chatgpt.com/
+          icon: chatgpt.png
 
 - Social:
     - Reddit:
         - abbr: RE
           href: https://reddit.com/
+          icon: reddit.png
     - Gmail:
         - abbr: GM
           href: https://mail.google.com/
+          icon: gmail.png
 
 - Education:
     - Duolingo:
         - abbr: DUO
           href: https://www.duolingo.com/
+          icon: duolingo.png
 
 - Entertainment:
     - YouTube:
         - abbr: YT
           href: https://youtube.com/
+          icon: youtube.png
     - 9anime:
         - abbr: 9A
           href: https://9anime.org.lv/
+          icon: 9anime.png
     - Chess.com:
         - abbr: CHS
           href: https://chess.com/
+          icon: chess-com.png
