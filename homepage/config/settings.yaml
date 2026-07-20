@@ -12,15 +12,15 @@ background:
   opacity: 50
 
 layout:
-  Media & Entertainment:
-    style: grid
-    columns: 2
-  Media Management:
-    style: grid
-    columns: 3
-  Storage & Infrastructure:
-    style: grid
-    columns: 2
-  System Metrics:
-    style: grid
-    columns: 3
+  - Media & Entertainment:
+      style: grid
+      columns: 1
+    Media Management:
+      style: grid
+      columns: 1
+    Storage & Infrastructure:
+      style: grid
+      columns: 1
+  - System Metrics:
+      style: grid
+      columns: 3
