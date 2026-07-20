@@ -25,11 +25,10 @@ layout:
       style: grid
       columns: 3
   - Developer:
-      style: grid
-      columns: 1
+      style: row
     Social:
-      style: grid
-      columns: 1
+      style: row
+    Education:
+      style: row
     Entertainment:
-      style: grid
-      columns: 1
+      style: row
