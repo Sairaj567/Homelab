@@ -1,0 +1,18 @@
+# ~/homelab/homepage/config/widgets.yaml
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
+      dateStyle: long
+
+- search:
+    provider: google
+    focus: true
+    target: _blank
+
+- glances:
+    url: http://glances:61208
+    version: 4
+    cpu: true
+    mem: true
+    uptime: true

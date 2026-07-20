@@ -1,0 +1,35 @@
+# ~/homelab/homepage/config/settings.yaml
+theme: dark
+color: slate
+
+headerStyle: clean
+shading: visual
+
+background:
+  image: https://images.unsplash.com/photo-1491466424936-e304919aada7
+  blur: sm
+  saturate: 50
+  opacity: 50
+
+layout:
+  - Media & Entertainment:
+      style: grid
+      columns: 1
+    Media Management:
+      style: grid
+      columns: 1
+    Storage & Infrastructure:
+      style: grid
+      columns: 1
+  - System Metrics:
+      style: grid
+      columns: 3
+  - Developer:
+      style: grid
+      columns: 1
+    Social:
+      style: grid
+      columns: 1
+    Entertainment:
+      style: grid
+      columns: 1

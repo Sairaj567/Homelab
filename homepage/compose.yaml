@@ -1,0 +1,27 @@
+name: homepage-stack
+
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=*  # <-- ADD THIS LINE TO ALLOW LOCAL IP ACCESS
+    restart: always
+
+  glances:
+    image: nicolargo/glances:latest-full
+    container_name: glances
+    pid: host
+    environment:
+      - GLANCES_OPT=-w
+    ports:
+      - '61208:61208'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys:/sys:ro
+    restart: always

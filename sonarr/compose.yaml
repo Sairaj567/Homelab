@@ -1,0 +1,24 @@
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    restart: unless-stopped
+
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+
+    volumes:
+      - /srv/apps/sonarr:/config
+      - /srv/media:/srv/media
+
+    ports:
+      - "8989:8989"
+
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true

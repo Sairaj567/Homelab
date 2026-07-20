@@ -1,0 +1,135 @@
+# ~/homelab/homepage/config/services.yaml
+
+- Media & Entertainment:
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://10.10.0.191:8096
+        description: Media Streaming Server
+        widget:
+          type: jellyfin
+          url: http://10.10.0.191:8096
+          key: 077787441fb94c07b6f3b0e43596b116
+
+    - qBittorrent:
+        icon: qbittorrent.png
+        href: https://torrent.021413.xyz/
+        description: Torrent Client
+        widget:
+          type: qbittorrent
+          url: http://10.10.0.191:8080
+          enableLeechProgress: true
+          enableLeechSize: true
+
+- Media Management:
+    - Sonarr:
+        icon: sonarr.png
+        href: http://10.10.0.191:8989
+        description: TV Shows Manager
+        widget:
+          type: sonarr
+          url: http://10.10.0.191:8989
+          key: 52062dfc5c4c44708ea5cfd6055aacd4
+
+    - Radarr:
+        icon: radarr.png
+        href: http://10.10.0.191:7878
+        description: Movies Manager
+        widget:
+          type: radarr
+          url: http://10.10.0.191:7878
+          key: bb2ad63f202a4522a013665112ec82eb
+
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://10.10.0.191:9696
+        description: Indexer Manager
+        widget:
+          type: prowlarr
+          url: http://10.10.0.191:9696
+          key: 053f0ec53eb8404f978cc7bb63389eb6
+
+- Storage & Infrastructure:
+    - Immich:
+        icon: immich.png
+        href: http://10.10.0.191:2283
+        description: Photo & Video Backup
+        widget:
+          type: immich
+          url: http://10.10.0.191:2283
+          key: hrkmrKGcjIhj6uxmZea6T9Hv7ALZV0GHx5UcMO8
+          version: 2
+
+    - Cloudflare:
+        icon: cloudflare.png
+        href: https://dash.cloudflare.com
+        description: Network Tunnel
+
+- System Metrics:
+    - CPU Usage:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: cpu
+          chart: true
+
+    - Memory Usage:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: memory
+          chart: true
+
+    - Network Usage:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: network:eth0
+          chart: true
+
+    - Top Processes:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: process
+
+    - CPU Temp:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: sensor:Package id 0
+          chart: true
+
+    - Disk I/O:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: disk:sda
+          chart: true
+
+    - Disk Space:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: fs:/
+          chart: true
+
+    - Docker Containers:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: docker
+
+    - System Uptime:
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: uptime
