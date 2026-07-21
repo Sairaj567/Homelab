@@ -1,5 +1,11 @@
+# Runtime data & app configs
 /immich/
 /jellyfin/cache
 /jellyfin/config
 /prowlarr/config
+/homepage/config/logs/
 
+# Secrets — API keys, tokens, credentials
+.env
+cloudflared/.env
+homepage/config/services.yaml

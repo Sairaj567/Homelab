@@ -3,6 +3,8 @@ services:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
     restart: unless-stopped
+    env_file:
+      - ../.env
 
     environment:
       PUID: ${PUID}

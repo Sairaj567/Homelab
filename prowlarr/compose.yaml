@@ -1,17 +1,17 @@
-version: '3.8'
-
 services:
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
+    env_file:
+      - ../.env
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Asia/Kolkata
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
     volumes:
       - ./config:/config
     ports:
-      - 9696:9696 # Web UI
+      - 9696:9696
     networks:
       - homelab
     restart: unless-stopped

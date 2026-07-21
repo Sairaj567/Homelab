@@ -10,7 +10,9 @@ services:
       - ./config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      - HOMEPAGE_ALLOWED_HOSTS=*  # <-- ADD THIS LINE TO ALLOW LOCAL IP ACCESS
+      - HOMEPAGE_ALLOWED_HOSTS=*
+    networks:
+      - homelab
     restart: always
 
   glances:
@@ -18,11 +20,18 @@ services:
     container_name: glances
     pid: host
     environment:
-      - GLANCES_OPT=-w --refresh 2 -C /etc/glances/glances.conf
+      - GLANCES_OPT=-w --refresh 2 -C /etc/glances/glances.conf --host-proc /host/proc
     ports:
       - '61208:61208'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /sys:/sys:ro
+      - /proc:/host/proc:ro
       - ./glances.conf:/etc/glances/glances.conf:ro
+    networks:
+      - homelab
     restart: always
+
+networks:
+  homelab:
+    external: true

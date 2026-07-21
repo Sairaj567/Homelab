@@ -3,6 +3,8 @@ services:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
     restart: unless-stopped
+    env_file:
+      - ../.env
 
     environment:
       PUID: ${PUID}
