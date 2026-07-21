@@ -1,5 +1,150 @@
 # ~/homelab/homepage/config/services.yaml
 
+# ═══════════════════════════════════════════════════════════
+#  ⚡ SYSTEM MONITOR TAB — Glances Metrics with Live Charts
+# ═══════════════════════════════════════════════════════════
+
+# ── Hero Row: At-a-Glance System Status ───────────────────
+- System Overview:
+    - CPU Usage:
+        icon: mdi-cpu-64-bit
+        href: http://10.10.0.191:61208
+        description: Processor Load
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: cpu
+          chart: true
+
+    - Memory Usage:
+        icon: mdi-memory
+        href: http://10.10.0.191:61208
+        description: RAM Utilization
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: memory
+          chart: true
+
+    - System Uptime:
+        icon: mdi-clock-check-outline
+        href: http://10.10.0.191:61208
+        description: Server Availability
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: uptime
+
+    - CPU Temperature:
+        icon: mdi-thermometer
+        href: http://10.10.0.191:61208
+        description: Thermal Status
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: sensor:Package id 0
+          chart: true
+
+# ── Performance Graphs: Deep Dive Charts ──────────────────
+- Performance Graphs:
+    - CPU History:
+        icon: mdi-chart-line
+        href: http://10.10.0.191:61208
+        description: Processor Activity Over Time
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: cpu
+          chart: true
+
+    - Memory History:
+        icon: mdi-chart-areaspline
+        href: http://10.10.0.191:61208
+        description: Memory Usage Over Time
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: memory
+          chart: true
+
+    - Temperature History:
+        icon: mdi-chart-bell-curve-cumulative
+        href: http://10.10.0.191:61208
+        description: Thermal Trend Over Time
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: sensor:Package id 0
+          chart: true
+
+# ── Storage & Network: I/O Metrics ───────────────────────
+- Storage & Network:
+    - Disk Space /:
+        icon: mdi-harddisk
+        href: http://10.10.0.191:61208
+        description: Root Filesystem Usage
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: fs:/
+          chart: true
+
+    - Disk I/O:
+        icon: mdi-swap-vertical-bold
+        href: http://10.10.0.191:61208
+        description: Read / Write Throughput
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: disk:sda
+          chart: true
+
+    - Network eth0:
+        icon: mdi-ethernet
+        href: http://10.10.0.191:61208
+        description: Network Traffic
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: network:eth0
+          chart: true
+
+# ── Containers & Processes: Operational Detail ────────────
+- Containers & Processes:
+    - Docker Containers:
+        icon: mdi-docker
+        href: http://10.10.0.191:61208
+        description: Running Container Status
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: docker
+
+    - Top Processes:
+        icon: mdi-format-list-bulleted
+        href: http://10.10.0.191:61208
+        description: Active Process List
+        widget:
+          type: glances
+          url: http://glances:61208
+          version: 4
+          metric: process
+
+# ═══════════════════════════════════════════════════════════
+#  🏠 HOME TAB — Services, Apps & Bookmarks
+# ═══════════════════════════════════════════════════════════
+
 - Media & Entertainment:
     - Jellyfin:
         icon: jellyfin.png
@@ -67,92 +212,4 @@
     - Glances:
         icon: glances.png
         href: http://10.10.0.191:61208
-        description: System Monitoring Dashboard
-
-- System Metrics:
-    - CPU Usage:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: cpu
-          chart: true
-
-    - Memory Usage:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: memory
-          chart: true
-
-    - Network Usage:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: network:eth0
-          chart: true
-
-    - Top Processes:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: process
-
-    - CPU Temp:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: sensor:Package id 0
-          chart: true
-
-    - Disk I/O:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: disk:sda
-          chart: true
-
-    - Disk Space:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: fs:/
-          chart: true
-
-    - Docker Containers:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: docker
-
-    - System Uptime:
-        icon: glances.png
-        href: http://10.10.0.191:61208
-        widget:
-          type: glances
-          url: http://glances:61208
-          version: 4
-          metric: uptime
+        description: Full System Monitor UI

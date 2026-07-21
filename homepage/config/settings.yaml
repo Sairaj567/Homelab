@@ -12,15 +12,34 @@ background:
   opacity: 50
 
 layout:
+  # === ⚡ SYSTEM MONITOR TAB (default — lands here first) ===
+  - System Overview:
+      tab: "⚡ System Monitor"
+      style: row
+      columns: 4
+  - Performance Graphs:
+      tab: "⚡ System Monitor"
+      style: row
+      columns: 3
+  - Storage & Network:
+      tab: "⚡ System Monitor"
+      style: row
+      columns: 3
+  - Containers & Processes:
+      tab: "⚡ System Monitor"
+      style: row
+      columns: 2
+
+  # === 🏠 HOME TAB ===
   - Media & Entertainment:
-      style: grid
-      columns: 1
-    Media Management:
-      style: grid
-      columns: 1
-    Storage & Infrastructure:
-      style: grid
-      columns: 1
-  - System Metrics:
-      style: grid
+      tab: "🏠 Home"
+      style: row
+      columns: 3
+  - Media Management:
+      tab: "🏠 Home"
+      style: row
+      columns: 3
+  - Storage & Infrastructure:
+      tab: "🏠 Home"
+      style: row
       columns: 3

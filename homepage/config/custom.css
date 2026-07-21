@@ -1,0 +1,181 @@
+/* ═══════════════════════════════════════════════════════════
+   Custom CSS — Premium Glassmorphism Dashboard
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Tab Navigation Styling ───────────────────────────────── */
+/* Tab bar container */
+#tabs-container,
+div[class*="tabs"] {
+  backdrop-filter: blur(12px) saturate(150%);
+}
+
+/* Individual tab buttons */
+li[role="tab"] button,
+button[role="tab"] {
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 0.75rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Active tab — glowing accent */
+li[role="tab"][data-headlessui-state~="selected"] button,
+button[role="tab"][data-headlessui-state~="selected"],
+li[role="tab"].selected button {
+  background: rgba(99, 102, 241, 0.2) !important;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.35),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  color: rgb(165, 180, 252) !important;
+  border-bottom: 2px solid rgb(129, 140, 248) !important;
+}
+
+/* Tab hover */
+li[role="tab"] button:hover,
+button[role="tab"]:hover {
+  background: rgba(99, 102, 241, 0.1) !important;
+  transform: translateY(-1px);
+}
+
+/* ── Service Cards — Glassmorphism ────────────────────────── */
+/* All service/widget cards */
+div[id*="service-"] > div,
+li[id*="service-"] > div,
+.service {
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  background: rgba(15, 23, 42, 0.55) !important;
+  border: 1px solid rgba(148, 163, 184, 0.1) !important;
+  border-radius: 1rem !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Card hover — lift & glow */
+div[id*="service-"] > div:hover,
+li[id*="service-"] > div:hover,
+.service:hover {
+  transform: translateY(-3px) scale(1.01) !important;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15),
+              0 4px 16px rgba(0, 0, 0, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* ── Widget/Chart Container Polish ────────────────────────── */
+/* Glances chart sparklines */
+div[class*="widget"] canvas,
+.widget canvas {
+  border-radius: 0.5rem !important;
+  opacity: 0.9;
+  transition: opacity 0.3s ease !important;
+}
+
+div[id*="service-"]:hover canvas,
+.service:hover canvas {
+  opacity: 1;
+}
+
+/* ── Section Headers — Elegant Group Titles ───────────────── */
+h2,
+.group-name {
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-size: 0.7rem !important;
+  color: rgba(148, 163, 184, 0.7) !important;
+  padding-bottom: 0.25rem !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* ── Info Widgets (top bar) — Subtle Glass ─────────────────── */
+#information-widgets .widget,
+div[id="information-widgets"] > div {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(15, 23, 42, 0.45) !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid rgba(148, 163, 184, 0.08) !important;
+}
+
+/* ── Service Icons — Soft Glow ─────────────────────────────── */
+div[id*="service-"] img,
+.service-icon {
+  filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.2));
+  transition: filter 0.3s ease !important;
+}
+
+div[id*="service-"]:hover img,
+.service:hover .service-icon {
+  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4));
+}
+
+/* ── Scrollbar — Minimal & Dark ────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.35);
+}
+
+/* ── Smooth Page Transitions ───────────────────────────────── */
+main,
+#page_container {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── MDI Icon Color Accents for System Monitor ─────────────── */
+/* Give metric cards a subtle colored left border for visual grouping */
+div[id*="service-cpu"] > div,
+div[id*="service-CPU"] > div {
+  border-left: 3px solid rgba(99, 102, 241, 0.5) !important;
+}
+
+div[id*="service-memory"] > div,
+div[id*="service-Memory"] > div {
+  border-left: 3px solid rgba(16, 185, 129, 0.5) !important;
+}
+
+div[id*="service-network"] > div,
+div[id*="service-Network"] > div {
+  border-left: 3px solid rgba(245, 158, 11, 0.5) !important;
+}
+
+div[id*="service-disk"] > div,
+div[id*="service-Disk"] > div {
+  border-left: 3px solid rgba(236, 72, 153, 0.5) !important;
+}
+
+div[id*="service-docker"] > div,
+div[id*="service-Docker"] > div {
+  border-left: 3px solid rgba(6, 182, 212, 0.5) !important;
+}
+
+div[id*="service-temperature"] > div,
+div[id*="service-Temperature"] > div,
+div[id*="service-temp"] > div,
+div[id*="service-Temp"] > div {
+  border-left: 3px solid rgba(239, 68, 68, 0.5) !important;
+}
